@@ -1,0 +1,112 @@
+<main class="flex flex-col h-screen bg-background text-foreground p-4 space-y-4">
+    <div class="text-lg panel-title">Sub-Grid Calculator</div>
+
+    <div class="panel" if.bind="selectedStone">
+        <div class="panel-title">Sub-Grid</div>
+        <div class="flex flex-wrap justify-center gap-2 mt-4 text-center">
+            <div>
+                <memoria-stone class="m-auto w-20" stone.bind="selectedStone"></memoria-stone>
+            </div>
+            <div>
+                <memoria-stone class="m-auto w-20" stone.bind="selectedStone"></memoria-stone>
+            </div>
+            <div>
+                <memoria-stone class="m-auto w-20" stone.bind="selectedStone"></memoria-stone>
+            </div>
+            <div>
+                <memoria-stone class="m-auto w-20" stone.bind="selectedStone"></memoria-stone>
+            </div>
+            <div>
+                <memoria-stone class="m-auto w-20" stone.bind="selectedStone"></memoria-stone>
+            </div>
+            <div>
+                <memoria-stone class="m-auto w-20" stone.bind="selectedStone"></memoria-stone>
+            </div>
+            <div>
+                <memoria-stone class="m-auto w-20" stone.bind="selectedStone"></memoria-stone>
+            </div>
+            <div>
+                <memoria-stone class="m-auto w-20" stone.bind="selectedStone"></memoria-stone>
+            </div>
+            <div>
+                <memoria-stone class="m-auto w-20" stone.bind="selectedStone"></memoria-stone>
+            </div>
+        </div>
+
+        <div class="flex justify-center gap-4 mt-4">
+            <div class="panel-title">Max Level</div>
+            <div class="flex gap-2 items-center">
+                <img src="assets/HP_Icon.png" />
+                HP: ${HP}
+                <img class="w-4" src="assets/${selectedStone.element}_Element.png" />
+                ${HPE}
+            </div>
+            <div class="flex gap-2 items-center">
+                <img src="assets/ATK_Icon.png" />
+                ATK: ${ATK}
+                <img class="w-4" src="assets/${selectedStone.element}_Element.png" />
+                ${ATKE}
+            </div>
+            <div class="flex gap-2 items-center">
+                <img src="assets/DEF_Icon.png" />
+                DEF: ${DEF}
+                <img class="w-4" src="assets/${selectedStone.element}_Element.png" />
+                ${DEFE}
+            </div>
+        </div>
+
+        <div class="flex justify-center gap-4 mt-4">
+            <div class="panel-title">Adorned</div>
+            <div class="flex gap-2 items-center">
+                <img src="assets/HP_Icon.png" />
+                HP: ${HPA}
+                <img class="w-4" src="assets/${selectedStone.element}_Element.png" />
+                ${HPEA}
+            </div>
+            <div class="flex gap-2 items-center">
+                <img src="assets/ATK_Icon.png" />
+                ATK: ${ATKA}
+                <img class="w-4" src="assets/${selectedStone.element}_Element.png" />
+                ${ATKEA}
+            </div>
+            <div class="flex gap-2 items-center">
+                <img src="assets/DEF_Icon.png" />
+                DEF: ${DEFA}
+                <img class="w-4" src="assets/${selectedStone.element}_Element.png" />
+                ${DEFEA}
+            </div>
+        </div>
+    </div>
+
+    <div class="panel scrollbar">
+        <div class="panel-title">Memoria Stones</div>
+
+        <div class=" flex flex-wrap justify-evenly gap-2 my-4">
+            <memoria-stone class="w-20" repeat.for="stone of stones" stone.bind="stone"
+                click.delegate="selectStone(stone)"></memoria-stone>
+        </div>
+    </div>
+
+    <div class="panel" if.bind="selectedStone">
+        <div class="panel-title">Selected</div>
+
+        <div class="flex gap-4">
+            <memoria-stone stone.bind="selectedStone"></memoria-stone>
+
+            <div>
+                <div>Max Level</div>
+                <div class="flex items-start gap-4">
+                    <img src="assets/HP_Icon.png" /> ${selectedStone.max().hp}
+                    <img src="assets/ATK_Icon.png" /> ${selectedStone.max().atk}
+                    <img src="assets/DEF_Icon.png" /> ${selectedStone.max().def}
+                </div>
+                <div>Adorned</div>
+                <div class="flex items-start gap-4">
+                    <img src="assets/HP_Icon.png" /> ${selectedStone.adorned().hp}
+                    <img src="assets/ATK_Icon.png" /> ${selectedStone.adorned().atk}
+                    <img src="assets/DEF_Icon.png" /> ${selectedStone.adorned().def}
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

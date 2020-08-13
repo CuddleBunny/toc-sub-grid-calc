@@ -1,0 +1,10 @@
+<template class="flex flex-col">
+    <div class="relative" style="margin: 10%; margin-bottom: 0;">
+        <img class="" src="assets/${stone.rarity}_Memoria_Stone.png" />
+        <img class="absolute top-0" src="assets/${stone.rarity}_Memoria_Stone_Overlay.png" />
+        <img class="absolute w-1/3" style="top: -10%;" src="assets/${stone.element}_Element.png" />
+        <img class="absolute w-1/3" style="top: 30%; left: -10%" src="assets/${stone.type.replace(' ', '_')}_Type.png" />
+    </div>
+
+    <div class="text-xs truncate">${stone.name}</div>
+</template>

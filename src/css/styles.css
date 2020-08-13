@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scrollbar {
+    overflow-y: auto;
+
+    /* TODO: Style? */
+}
+
+.panel {
+    @apply border-solid border-2 border-border p-2;
+}
+
+.panel-title {
+    @apply py-1 px-4;
+    background: linear-gradient(to right, theme('colors.border'), rgba(0,0,0,0));
+}
