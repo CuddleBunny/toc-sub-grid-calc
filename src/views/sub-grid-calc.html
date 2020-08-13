@@ -5,73 +5,73 @@
         <div class="panel-title">Sub-Grid</div>
         <div class="flex flex-wrap justify-center gap-2 mt-4 text-center">
             <div>
-                <memoria-stone class="m-auto w-20" stone.bind="selectedStone"></memoria-stone>
+                <memoria-stone class="m-auto w-8 sm:w-20" stone.bind="selectedStone"></memoria-stone>
             </div>
             <div>
-                <memoria-stone class="m-auto w-20" stone.bind="selectedStone"></memoria-stone>
+                <memoria-stone class="m-auto w-8 sm:w-20" stone.bind="selectedStone"></memoria-stone>
             </div>
             <div>
-                <memoria-stone class="m-auto w-20" stone.bind="selectedStone"></memoria-stone>
+                <memoria-stone class="m-auto w-8 sm:w-20" stone.bind="selectedStone"></memoria-stone>
             </div>
             <div>
-                <memoria-stone class="m-auto w-20" stone.bind="selectedStone"></memoria-stone>
+                <memoria-stone class="m-auto w-8 sm:w-20" stone.bind="selectedStone"></memoria-stone>
             </div>
             <div>
-                <memoria-stone class="m-auto w-20" stone.bind="selectedStone"></memoria-stone>
+                <memoria-stone class="m-auto w-8 sm:w-20" stone.bind="selectedStone"></memoria-stone>
             </div>
             <div>
-                <memoria-stone class="m-auto w-20" stone.bind="selectedStone"></memoria-stone>
+                <memoria-stone class="m-auto w-8 sm:w-20" stone.bind="selectedStone"></memoria-stone>
             </div>
             <div>
-                <memoria-stone class="m-auto w-20" stone.bind="selectedStone"></memoria-stone>
+                <memoria-stone class="m-auto w-8 sm:w-20" stone.bind="selectedStone"></memoria-stone>
             </div>
             <div>
-                <memoria-stone class="m-auto w-20" stone.bind="selectedStone"></memoria-stone>
+                <memoria-stone class="m-auto w-8 sm:w-20" stone.bind="selectedStone"></memoria-stone>
             </div>
             <div>
-                <memoria-stone class="m-auto w-20" stone.bind="selectedStone"></memoria-stone>
+                <memoria-stone class="m-auto w-8 sm:w-20" stone.bind="selectedStone"></memoria-stone>
             </div>
         </div>
 
-        <div class="flex justify-center gap-4 mt-4">
+        <div class="flex flex-wrap justify-center gap-4 mt-4 text-xs">
             <div class="panel-title">Max Level</div>
             <div class="flex gap-2 items-center">
                 <img src="assets/HP_Icon.png" />
-                HP: ${HP}
+                ${HP}
                 <img class="w-4" src="assets/${selectedStone.element}_Element.png" />
                 ${HPE}
             </div>
             <div class="flex gap-2 items-center">
                 <img src="assets/ATK_Icon.png" />
-                ATK: ${ATK}
+                ${ATK}
                 <img class="w-4" src="assets/${selectedStone.element}_Element.png" />
                 ${ATKE}
             </div>
             <div class="flex gap-2 items-center">
                 <img src="assets/DEF_Icon.png" />
-                DEF: ${DEF}
+                ${DEF}
                 <img class="w-4" src="assets/${selectedStone.element}_Element.png" />
                 ${DEFE}
             </div>
         </div>
 
-        <div class="flex justify-center gap-4 mt-4">
+        <div class="flex flex-wrap justify-center gap-4 mt-4 text-xs">
             <div class="panel-title">Adorned</div>
             <div class="flex gap-2 items-center">
                 <img src="assets/HP_Icon.png" />
-                HP: ${HPA}
+                ${HPA}
                 <img class="w-4" src="assets/${selectedStone.element}_Element.png" />
                 ${HPEA}
             </div>
             <div class="flex gap-2 items-center">
                 <img src="assets/ATK_Icon.png" />
-                ATK: ${ATKA}
+                ${ATKA}
                 <img class="w-4" src="assets/${selectedStone.element}_Element.png" />
                 ${ATKEA}
             </div>
             <div class="flex gap-2 items-center">
                 <img src="assets/DEF_Icon.png" />
-                DEF: ${DEFA}
+                ${DEFA}
                 <img class="w-4" src="assets/${selectedStone.element}_Element.png" />
                 ${DEFEA}
             </div>
@@ -87,11 +87,11 @@
         </div>
     </div>
 
-    <div class="panel" if.bind="selectedStone">
+    <div class="hidden sm:block panel" if.bind="selectedStone">
         <div class="panel-title">Selected</div>
 
-        <div class="flex gap-4">
-            <memoria-stone stone.bind="selectedStone"></memoria-stone>
+        <div class="flex flex-col sm:flex-row gap-4">
+            <memoria-stone class="w-12 sm:w-auto" stone.bind="selectedStone"></memoria-stone>
 
             <div>
                 <div>Max Level</div>
