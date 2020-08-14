@@ -8,6 +8,7 @@
   },
   "license": "UNLICENSED",
   "dependencies": {
+    "@microsoft/applicationinsights-web": "^2.5.7",
     "aurelia": "dev",
     "tailwindcss": "^1.6.2"
   },

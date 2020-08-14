@@ -7,3 +7,7 @@ This project is bootstrapped by [aurelia/new](https://github.com/aurelia/new).
 
 ## Start dev web server
     yarn start
+
+## Forks
+
+Forks of this application should change or remove the Application Insights telemetry key in `src/main.ts`.
