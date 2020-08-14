@@ -84,7 +84,7 @@ export class SubGridCalc implements IRouteableComponent {
       const html = parser.parseFromString(data.parse.text['*'], 'text/html');
       const blocks: Array<HTMLElement> = [].slice.call(html.querySelectorAll('code'));
       const dataArray = blocks.map(stoneBlock => {
-        let stoneString = stoneBlock.innerText.replace(/[^\w{}[\],:" ]*/g, '');
+        let stoneString = stoneBlock.innerText.replace('\n', '')//.replace(/[^((["'])(?:(?=(\\?))\2.)*?\1){},]*/g, '');
 
         if (stoneString[stoneString.length - 1] === ',')
           stoneString = stoneString.substr(0, stoneString.length - 1);
